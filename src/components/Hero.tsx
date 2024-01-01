@@ -17,11 +17,12 @@ const Hero = () => {
           </TypographyH1>
           <div className="relative block h-full min-h-[300px] w-full max-w-full sm:hidden">
             <Image
+              aria-hidden="true"
               src={"/assets/mockup.svg"}
               alt="mockup"
-              fill
               className="object-cover"
-              priority
+              fill
+              loading="lazy"
             />
           </div>
           <TypographyP className="text-sm font-medium text-[#2A2367] dark:text-white sm:max-w-sm sm:text-base lg:max-w-full xl:text-lg">
@@ -32,7 +33,10 @@ const Hero = () => {
             </span>
           </TypographyP>
           <div className="mx-auto mt-5 flex w-full max-w-[200px] items-center justify-start md:mt-10 md:max-w-full">
-            <Button className="inline-block w-full md:h-[50px] md:max-w-[275px] md:text-base">
+            <Button
+              role="button"
+              className="inline-block w-full md:h-[50px] md:max-w-[275px] md:text-base"
+            >
               Узнать стоимость
             </Button>
           </div>
@@ -47,11 +51,24 @@ const Hero = () => {
           </TypographyP>
         </div>
         <div className="relative hidden h-full min-h-[560px] w-full max-w-4xl lg:block">
-          <Image src={"/assets/mockup.svg"} alt="mockup" fill loading="lazy" />
+          <Image
+            aria-hidden="true"
+            src={"/assets/mockup.svg"}
+            alt="mockup"
+            fill
+            loading="lazy"
+          />
         </div>
       </div>
       <div className="mt-10 flex items-center justify-center md:mt-24">
-        <Button type="button" variant={"link"} className="animate-bounce">
+        <Button
+          aria-label="down-button"
+          title="Click to down"
+          name="down-btn"
+          type="button"
+          variant={"link"}
+          className="animate-bounce"
+        >
           <ChevronDown className="h-7 w-7 text-primaryColor" />
         </Button>
       </div>

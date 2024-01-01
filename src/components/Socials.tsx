@@ -48,11 +48,14 @@ const Socials = () => {
         {socials.map(({ title, href, Icon }, i) => (
           <li key={i}>
             <Link
+              title={title}
               href={href}
               target="_blank"
-              title={title}
+              about={title}
               className={variants.link}
+              aria-label={title}
             >
+              {/* #020817 #6B5AF9 */}
               <Icon className={variants.icon} />
             </Link>
           </li>

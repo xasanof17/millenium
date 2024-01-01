@@ -47,7 +47,7 @@ const OurFeatures = () => {
           {cards.map(({ feature, text }, i) => (
             <Card
               key={i}
-              className="bg-gradient-to-tr from-indigo-500 to-indigo-900 shadow-md"
+              className="bg-gradient-to-tr from-indigo-500 to-indigo-900 shadow-2xl"
             >
               <CardHeader className="px-4 xl:px-5">
                 <CardTitle
@@ -56,7 +56,7 @@ const OurFeatures = () => {
                 >
                   {`0${i + 1}`}
                 </CardTitle>
-                <CardDescription className="text-base font-bold text-slate-900 underline underline-offset-8 dark:text-slate-800">
+                <CardDescription className="text-base font-bold tracking-wide text-gray-900 underline underline-offset-8 dark:text-slate-200">
                   {feature}
                 </CardDescription>
               </CardHeader>

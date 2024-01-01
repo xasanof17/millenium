@@ -22,17 +22,24 @@ const Navbar = () => {
   }, []);
   return (
     <header
+      role="banner"
       className={cn(
         isScrolled && "shadow-md",
         "sticky left-0 top-0 z-50 bg-background",
       )}
     >
       {/* <Banner /> */}
-      <nav className="container flex items-center justify-between py-3">
+      <nav
+        role="navigation"
+        className="container flex items-center justify-between py-3"
+      >
         <Button
+          name="menu-btn"
+          title="Menu"
           onClick={() => setToggleMenu((prev) => !prev)}
           variant={"outline"}
           className="px-3 lg:hidden"
+          aria-label="menu-btn"
         >
           {!toggleMenu ? (
             <MenuIcon className="h-6 w-6 font-medium text-foreground" />
@@ -46,6 +53,7 @@ const Navbar = () => {
             <li key={i}>
               <Link
                 href={href}
+                aria-label={`url to ${title} page`}
                 className="transtiion-colors px-2 text-base font-medium text-primary duration-200 ease-out hover:text-primaryColor dark:text-gray-200 xl:px-3"
               >
                 {title}

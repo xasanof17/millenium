@@ -12,6 +12,8 @@ const UpArrow = () => {
   return (
     <div className="mt-auto flex items-center justify-center">
       <button
+      title="click to up"
+        name="up-btn"
         type="button"
         className="rounded-full bg-white p-3"
         onClick={handleScrollToTop}

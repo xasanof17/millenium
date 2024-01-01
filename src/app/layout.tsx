@@ -128,7 +128,7 @@ export default function LocaleLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main>{children}</main>
+          <main role="main">{children}</main>
           <Footer />
           <Socials />
           <TailwindIndicator />

@@ -10,7 +10,7 @@ type Link = {
 
 type Menu = {
   links: Link[];
-  toggleMenu: boolean;
+  toggleMenu?: boolean;
   setToggleMenu: Dispatch<SetStateAction<boolean>>;
 };
 
@@ -23,6 +23,8 @@ const Menu: FC<Menu> = ({ links, toggleMenu, setToggleMenu }) => {
             <Link
               onClick={() => setToggleMenu((prev) => !prev)}
               href={href}
+              title={title}
+              aria-label={title}
               className="text-lg font-medium text-gray-500 hover:text-primaryColor"
             >
               {title}

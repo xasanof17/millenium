@@ -52,7 +52,7 @@ const Footer = () => {
     icon: "w-6 h-6 transition-colors duration-300 text-white",
   };
   return (
-    <footer id="footer" className="bg-[#2A2367] pb-5 pt-14">
+    <footer role="contentinfo" id="footer" className="bg-[#2A2367] pb-5 pt-14">
       <div className="container flex flex-col">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           <div className="flex flex-col items-start">

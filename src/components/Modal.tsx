@@ -14,7 +14,12 @@ const Modal = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant={"default"} className="px-3 text-base">
+        <Button
+          aria-label="modal-btn"
+          role="button"
+          variant={"default"}
+          className="px-3 text-base"
+        >
           <span className="hidden lg:block">Заказать звонок</span>
           <PhoneIcon className="block h-6 w-6 lg:hidden" />
         </Button>
