@@ -9,7 +9,7 @@ import {
 export default function HomePage() {
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       <OurFeatures />
       <YouGetting />
       <ResearchingBusiness />
